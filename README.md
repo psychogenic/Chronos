@@ -12,22 +12,36 @@ and the examples directory contains samples that should run as-is on any Arduino
 
 To whet your appetite, a few simple samples:
 > // a datetime
+>
 > Chronos::DateTime inAWhile = Chronos::DateTime::now() + Chronos::Span::Hours(2);
+>
 > // a little later
+>
 > inAWhile += Chronos::Span::Minutes(20);
+>
 > 
 > // how long until the following tuesday?
+>
 > (inAWhile.next(Chronos::Weekday::Tuesday) - inAWhile).days()
 >
+>
 > // add an event to a calendar, my yoga class every monday morning:
+>
 > MyCalendar.add(
+>
 >    Chronos::Event(MY_YOGA_CLASS_EVENT_ID,
+>
 >                Chronos::Mark::Weekly(Chronos::Weekday::Monday, 8, 30),
+>
 >                Chronos::Span::Hours(1)));
 >
+>
 > // find the next 5 classes, from now
+>
 > Chronos::Event::Occurrences myClasses[5];
+>
 > MyCalendar.listNext(5, myClasses, Chronos::DateTime::now());
+>
 >
 > // etc.
 
