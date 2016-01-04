@@ -1,0 +1,95 @@
+#######################################
+# Syntax Coloring Map For Chronos
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+Chronos	KEYWORD1
+Mark	KEYWORD1
+Event	KEYWORD1
+Schedule	KEYWORD1
+Calendar	KEYWORD1
+Daily	KEYWORD1
+Weekly	KEYWORD1
+Monthly	KEYWORD1
+Yearly	KEYWORD1
+DateTime	KEYWORD1
+Bounds	KEYWORD1
+Delta	KEYWORD1
+Span	KEYWORD1
+Absolute	KEYWORD1
+Occurrence	KEYWORD1
+Weekday	KEYWORD1
+Seconds	KEYWORD1
+Minutes	KEYWORD1
+Hours	KEYWORD1
+Days	KEYWORD1
+Weeks	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+now	KEYWORD2
+second	KEYWORD2
+minute	KEYWORD2
+hour	KEYWORD2
+day	KEYWORD2
+month	KEYWORD2
+year	KEYWORD2
+next	KEYWORD2
+previous	KEYWORD2
+listNext	KEYWORD2
+listPrevious	KEYWORD2
+listOngoing	KEYWORD2
+listForDay	KEYWORD2
+hours	KEYWORD2
+minutes	KEYWORD2
+seconds	KEYWORD2
+totalSeconds	KEYWORD2
+dayBounds	KEYWORD2
+monthBounds	KEYWORD2
+yearBounds	KEYWORD2
+startOfDay	KEYWORD2
+endOfDay	KEYWORD2
+setSecond	KEYWORD2
+setMinute	KEYWORD2
+setHour	KEYWORD2
+setDay	KEYWORD2
+setMonth	KEYWORD2
+setYear	KEYWORD2
+setToStartOfDay	KEYWORD2
+setToEndOfDay	KEYWORD2
+isWeekend	KEYWORD2
+isWeekday	KEYWORD2
+DefineCalendarType	KEYWORD2
+
+
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+Sunday	LITERAL1
+Monday	LITERAL1
+Tuesday	LITERAL1
+Wednesday	LITERAL1
+Thursday	LITERAL1
+Friday	LITERAL1
+Saturday	LITERAL1
+January	LITERAL1
+February	LITERAL1
+March	LITERAL1
+April	LITERAL1
+May	LITERAL1
+June	LITERAL1
+July	LITERAL1
+August	LITERAL1
+September	LITERAL1
+October	LITERAL1
+November	LITERAL1
+December	LITERAL1
+
