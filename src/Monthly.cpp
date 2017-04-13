@@ -89,24 +89,30 @@ DateTime Monthly::applyTo(const DateTime& dt,
 	{
 		// we're on this month's target... need to switch months
 
+		DateTime mod(els);
 		if (dir == Next)
 		{
-			if (els.Month < 12)
+			if (mod <= dt)
 			{
-				els.Month++;
-
-			} else {
-				els.Month = 1;
-				els.Year++;
+				if (els.Month < 12)
+				{
+					els.Month++;
+				} else {
+					els.Month = 1;
+					els.Year++;
+				}
 			}
 		} else {
 			// backward
-			if (els.Month > 1)
+			if (mod >= dt)
 			{
-				els.Month --;
-			} else {
-				els.Month = 12;
-				els.Year--;
+				if (els.Month > 1)
+				{
+					els.Month --;
+				} else {
+					els.Month = 12;
+					els.Year--;
+				}
 			}
 		}
 	} else if (day > els.Day)
