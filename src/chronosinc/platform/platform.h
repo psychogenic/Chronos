@@ -47,10 +47,12 @@
 #define CHRONOS_DELAY_MS(t)
 #endif
 
+#ifdef ENABLE_UTILITY_INCLUDE
 #ifdef __cplusplus
 #if (__cplusplus > 201100L)
 #include <utility>
 #define PLATFORM_SUPPORTS_RVAL_MOVE
+#endif
 #endif
 #endif
 

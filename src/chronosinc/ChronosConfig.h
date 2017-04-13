@@ -38,10 +38,13 @@
 // CHRONOS_DEBUG_ENABLE -- only enable this on system's with lotsa ram.
 //define CHRONOS_DEBUG_ENABLE
 
+// ENABLE_UTILITY_INCLUDE -- enable include of <utility>, which 
+// seems to be missing for 'duino...
+//define ENABLE_UTILITY_INCLUDE
 
 
 #define CHRONOS_VERSION			1
-#define CHRONOS_SUBVERSION		0
+#define CHRONOS_SUBVERSION		1
 #define CHRONOS_PATCHLEVEL		0
 
 #endif /* CHRONOS_INTINCLUDES_CHRONOSCONFIG_H_ */
