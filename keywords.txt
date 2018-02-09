@@ -12,6 +12,7 @@ Schedule	KEYWORD1
 Calendar	KEYWORD1
 Daily	KEYWORD1
 Weekly	KEYWORD1
+Hourly	KEYWORD1
 Monthly	KEYWORD1
 Yearly	KEYWORD1
 DateTime	KEYWORD1

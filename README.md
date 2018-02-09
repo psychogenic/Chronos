@@ -59,7 +59,7 @@ More importantly, you can have a 10 (recurring) event calendar in only 415 bytes
 ## License
 
 Chronos is 
-**Copyright (C) 2015, 2016 Pat Deegan**
+**Copyright (C) 2015-2018 Pat Deegan**
 and released under the *LGPL*.
 
       Chronos is free software: you can redistribute it and/or modify
