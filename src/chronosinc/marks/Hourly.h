@@ -1,7 +1,6 @@
 /*
- * marks.h
- *
- * Main include for time "marks" -- sets of 0-dimensional points in time.
+ * Hourly.h
+ * A time mark recurring Hourly.
  *
  *  http://flyingcarsandstuff.com/projects/chronos
  *  Created on: Dec 18, 2015
@@ -25,15 +24,31 @@
  *    along with Chronos.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef CHRONOS_INTINCLUDES_MARK_EVENTS_H_
+#ifndef CHRONOS_INTINCLUDES_EVENTS_HOURLY_H_
+#define CHRONOS_INTINCLUDES_EVENTS_HOURLY_H_
 
-#define CHRONOS_INTINCLUDES_MARK_EVENTS_H_
+#include "../DateTime.h"
+#include "../Event.h"
+namespace Chronos {
+namespace Mark {
 
-#include "../../chronosinc/marks/Hourly.h"
-#include "../../chronosinc/marks/Daily.h"
-#include "../../chronosinc/marks/Weekly.h"
-#include "../../chronosinc/marks/Monthly.h"
-#include "../../chronosinc/marks/Yearly.h"
+class Hourly : public Event {
+public:
+	Hourly(Minutes min, Seconds sec=0);
 
 
-#endif /* CHRONOS_INTINCLUDES_MARK_EVENTS_H_ */
+	virtual DateTime next(const DateTime & dt) const;
+	virtual DateTime previous(const DateTime & dt)  const;
+	virtual Event * clone()  const;
+private:
+
+	DateTime applyTo(const DateTime & dt) const;
+
+	Minutes minute;
+	Seconds sec;
+};
+
+} /* namespace Event */
+} /* namespace Chronos */
+
+#endif /* CHRONOS_INTINCLUDES_EVENTS_HOURLY_H_ */

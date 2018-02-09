@@ -1,7 +1,7 @@
+#include "chronosinc/marks/Hourly.h"
+
 /*
- * marks.h
- *
- * Main include for time "marks" -- sets of 0-dimensional points in time.
+ * Hourly.cpp
  *
  *  http://flyingcarsandstuff.com/projects/chronos
  *  Created on: Dec 18, 2015
@@ -25,15 +25,60 @@
  *    along with Chronos.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef CHRONOS_INTINCLUDES_MARK_EVENTS_H_
+#include "chronosinc/Delta.h"
+#include "chronosinc/marks/Hourly.h"
+namespace Chronos {
+namespace Mark {
 
-#define CHRONOS_INTINCLUDES_MARK_EVENTS_H_
+Hourly::Hourly(Minutes m, Seconds s) :
+	Event(),
+	minute(m), sec(s)
+{
 
-#include "../../chronosinc/marks/Hourly.h"
-#include "../../chronosinc/marks/Daily.h"
-#include "../../chronosinc/marks/Weekly.h"
-#include "../../chronosinc/marks/Monthly.h"
-#include "../../chronosinc/marks/Yearly.h"
+}
+
+Event * Hourly::clone()  const
+{
+	return new Hourly(minute, sec);
+
+}
+DateTime Hourly::applyTo(const DateTime & dt) const
+{
 
 
-#endif /* CHRONOS_INTINCLUDES_MARK_EVENTS_H_ */
+	Chronos::TimeElements els(dt.asElements());
+
+	els.Minute = minute;
+	els.Second = sec;
+
+	return DateTime(els);
+
+
+}
+DateTime Hourly::next(const DateTime & dt) const {
+
+	DateTime theNext(applyTo(dt));
+
+	if (theNext > dt)
+		return theNext;
+
+	theNext += Span::Hours(1);
+
+	return theNext;
+
+}
+
+DateTime Hourly::previous(const DateTime & dt)  const {
+
+
+	DateTime thePrev(applyTo(dt));
+
+	if (thePrev < dt)
+		return thePrev;
+
+	thePrev -= Span::Hours(1);
+	return thePrev;
+}
+
+} /* namespace Event */
+} /* namespace Chronos */
